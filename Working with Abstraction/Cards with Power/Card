@@ -1,0 +1,18 @@
+public class Card {
+
+    private CardSuit cardSuits;
+    private CardRank cardRanks;
+
+    public Card (CardSuit cardSuits , CardRank cardRanks) {
+
+        this.cardSuits = cardSuits;
+        this.cardRanks = cardRanks;
+    }
+
+
+    public int calculatePower() {
+
+        return this.cardSuits.getValue() + cardRanks.getValue();
+    }
+
+}
