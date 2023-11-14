@@ -20,7 +20,7 @@ public class Chicken {
         }
         this.age = age;
     }
-    private double calculateProductPerDay() {
+    public double calculateProductPerDay() {
 
         double currentEggs = 0.75;
 
@@ -32,12 +32,9 @@ public class Chicken {
 
         }return currentEggs;
     }
-    public double productPerDay() {
-        return calculateProductPerDay();
-    }
 
     @Override
     public String toString() {
-        return String.format("Chicken %s (age %d) can produce %.2f eggs per day.",name, age, productPerDay());
+        return String.format("Chicken %s (age %d) can produce %.2f eggs per day.",name, age, calculateProductPerDay());
     }
 }
